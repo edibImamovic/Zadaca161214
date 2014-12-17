@@ -1,89 +1,88 @@
+/**
+ * 
+ * 
+ * @author Edib Imamovic
+ *
+ */
+
+// Zadatak za samostalan rad
 
 public class Student {
 
-	//Zadatak za samostalan rad
-	
-	private String ime;
-	private String prezime;
-	
+	private String name;
+	private String surname;
+
 	/**
 	 * Konstruktor sa dva parametra
-	 * @param ime
-	 * @param prezime
+	 * 
+	 * @param name
+	 * @param surname
 	 */
-	
-	public Student(String ime, String prezime)
-	{
-		if (prezime.length() < 1 || ime.length() < 1)
-		{
-			throw new IllegalArgumentException("Ime ili prezime ne može biti prazno!");
-		}
-		else
-		{
-			this.ime = ime;
-			this.prezime = prezime;
+
+	public Student(String name, String surname) {
+		if (surname.length() < 1 || name.length() < 1) {
+			throw new IllegalArgumentException(
+					"Ime ili prezime ne može biti prazno!");
+		} else {
+			this.name = name;
+			this.surname = surname;
 		}
 	}
 
 	/**
 	 * Getter za ime
-	 * @return ime
+	 * 
+	 * @return name
 	 */
-	
-	public String getIme()
-	{
-		return ime;
+
+	public String getName() {
+		return name;
 	}
-	
+
 	/**
 	 * Getter za prezime
-	 * @return
+	 * 
+	 * @return surname
 	 */
-	
-	public String getPrezime()
-	{
-		return prezime;
+
+	public String getSurname() {
+		return surname;
 	}
-	
+
 	/**
 	 * Setter za prezime
-	 * @param prezime2
+	 * 
+	 * @param surname
 	 */
-	
-	public void setPrezime(String prezime2) {
-		if (this.prezime.length() < 1)
-		{
+
+	public void setSurname(String surname) {
+		if (this.surname.length() < 1) {
 			throw new IllegalArgumentException("Prezime ne može biti prazno!");
+		} else {
+			this.surname = surname;
 		}
-		else
-		{
-			this.prezime = prezime;
-		}
-		
+
 	}
 
 	/**
 	 * Setter za ime
-	 * @param ime2
+	 * 
+	 * @param name
 	 */
-	
-	public void setIme(String ime2) {
-		if (ime.length() < 1)
-		{
+
+	public void setIme(String name) {
+		if (name.length() < 1) {
 			throw new IllegalArgumentException("Ime ne može biti prazno!");
-		}
-		else
-		{
-			this.ime = ime;
+		} else {
+			this.name = name;
 		}
 	}
-	
+
 	/**
-	 * Funkcija vraæa straing sa imenom i prezimenom studenta
+	 * Funkcija vraæa string sa imenom i prezimenom studenta
 	 */
-	
-	public String toString()
-	{
-		return ime + " " + prezime;
+
+	public String toString() {
+		return name + " " + surname;
 	}
 }
